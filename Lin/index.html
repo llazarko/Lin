@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Lin - Një perlë e qetë buzë Liqenit të Ohrit. Zbuloni historinë, natyrën dhe kulturën e këtij fshati unik shqiptar." />
+  <meta name="theme-color" content="#0a2238" />
+  <link rel="icon" type="image/png" href="src/images/LIN.webp">
+  <title>Lin — Liqeni i Ohrit, Shqipëri</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════ NAVBAR ═══════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#">LIN</a>
+
+      <div class="nav-right">
+        <!-- Language switcher -->
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-active" id="langBtn" aria-label="Language">
+            <span class="lang-flag" id="currentFlag">🇦🇱</span>
+            <span class="lang-code" id="currentLang">SQ</span>
+            <svg width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <button class="lang-opt" data-lang="sq" data-flag="🇦🇱" data-code="SQ">🇦🇱 Shqip</button>
+            <button class="lang-opt" data-lang="en" data-flag="🇬🇧" data-code="EN">🇬🇧 English</button>
+            <button class="lang-opt" data-lang="de" data-flag="🇩🇪" data-code="DE">🇩🇪 Deutsch</button>
+            <button class="lang-opt" data-lang="fr" data-flag="🇫🇷" data-code="FR">🇫🇷 Français</button>
+          </div>
+        </div>
+
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#historia" class="menu-link" data-i18n="nav_history">Historia</a></li>
+        <li><a href="#attractions" class="menu-link" data-i18n="nav_attractions">Atraksionet</a></li>
+        <li><a href="#aktivitete" class="menu-link" data-i18n="nav_activities">Aktivitetet</a></li>
+        <li><a href="#galeria" class="menu-link" data-i18n="nav_gallery">Galeria</a></li>
+        <li><a href="#gastronomia" class="menu-link" data-i18n="nav_food">Gastronomia</a></li>
+        <li><a href="#info" class="menu-link" data-i18n="nav_info">Informacion</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════ HERO ═══════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <!-- Ndrysho këtë pjesë në index.html -->
+<div class="hero-video-wrap">
+  <video class="hero-video" autoplay muted loop playsinline poster="src/images/main.webp">
+    <source src="src/video/lin2.mp4" type="video/mp4">
+    <!-- Fallback image -->
+    <div class="hero-img-fallback"></div>
+  </video>
+</div>
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-tag" data-i18n="hero_tag">Pogradec · Shqipëri</div>
+      <h1 class="hero-title">
+        <span class="hero-title-main" data-i18n="hero_title">Mirësevini në Lin</span>
+      </h1>
+      <p class="hero-sub" data-i18n="hero_sub">Një perlë e qetë buzë Liqenit të Ohrit</p>
+      
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ INTRO STRIP ═══════════════════════════════════ -->
+  <section class="intro-strip">
+    <div class="strip-inner">
+      <div class="strip-item">
+        <span class="strip-num">2000+</span>
+        <span class="strip-label" data-i18n="strip_years">Vjet Histori</span>
+      </div>
+      <div class="strip-divider"></div>
+      <div class="strip-item">
+        <span class="strip-num">288m</span>
+        <span class="strip-label" data-i18n="strip_lake">Lartësia e Liqenit</span>
+      </div>
+      <div class="strip-divider"></div>
+      <div class="strip-item">
+        <span class="strip-num">UNESCO</span>
+        <span class="strip-label" data-i18n="strip_heritage">Trashëgimi Botërore</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ HISTORIA ═══════════════════════════════════ -->
+  <section class="section historia" id="historia">
+    <div class="container">
+      <div class="section-label" data-i18n="section_label_history">Historia</div>
+      <h2 class="section-title" data-i18n="history_title">Një Fshat me Rrënjë Mijëravjeçare</h2>
+      <p class="section-lead" data-i18n="history_lead">Lin është një nga vendbanimet më të vjetra të bregut të Liqenit të Ohrit, me gjurmë civilizimi që kthehen deri në epokën antike.</p>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="tl-year">V-VI sh. pas Kr.</div>
+            <h3 class="tl-title" data-i18n="tl1_title">Bazilika Paleokristiane</h3>
+            <p class="tl-text" data-i18n="tl1_text">Kisha e lashtë me mozaikët e famshëm të dyshemesë — një mrekulli e artit paleokristian në Ballkan, e zbuluar nga arkeologët gjatë shekullit XX.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="tl-year">Mesjeta</div>
+            <h3 class="tl-title" data-i18n="tl2_title">Qendra Peshkimi & Tregtie</h3>
+            <p class="tl-text" data-i18n="tl2_text">Lin shërbeu si port i rëndësishëm tregtar dhe qendër peshkimi në bregdetin lindor të Shqipërisë, duke lidhur kulturat e dy anëve të liqenit.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="tl-year">Sot</div>
+            <h3 class="tl-title" data-i18n="tl3_title">Destinacion i Zbuluar</h3>
+            <p class="tl-text" data-i18n="tl3_text">Lin po bëhet gjithnjë e më shumë një destinacion europian "hidden gem", me vizitorë nga e gjithë bota që vijnë për qetësinë, historinë dhe bukurinë e paprekur.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mosaic-card reveal">
+        <div class="mosaic-img">
+          <img src="src/images/basilica.webp"
+               onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=75'"
+               alt="Mozaiku i Bazilikës së Linit" loading="lazy" />
+        </div>
+        <div class="mosaic-text">
+          <div class="mosaic-label" data-i18n="mosaic_label">Trashëgimia</div>
+          <h3 data-i18n="mosaic_title">Mozaikët e Bazilikës</h3>
+          <p data-i18n="mosaic_desc">Dyshemeja mozaik e bazilikës paleokristiane është një nga gjetjet më të rralla arkeologjike në Shqipëri — me motive gjeometrike dhe figurative që tregojnë lulëzimin e artit kristian në këtë cep të Ballkanit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ ATTRACTIONS ═══════════════════════════════════ -->
+  <section class="section attractions" id="attractions">
+    <div class="container">
+      <div class="section-label" data-i18n="section_label_attr">Atraksionet</div>
+      <h2 class="section-title" data-i18n="attr_title">Zbuloni Vendet e Bukura</h2>
+
+      <div class="attr-grid">
+        <div class="attr-card reveal" style="--delay:0s">
+          <div class="attr-img-wrap">
+            <img src="src/images/basilica-view.webp" alt="Bazilika" loading="lazy" />
+            <div class="attr-overlay"></div>
+          </div>
+          <div class="attr-body">
+            <div class="attr-tag" data-i18n="attr_tag_heritage">Trashëgimi</div>
+            <h3 data-i18n="attr1_title">Bazilika Paleokristiane</h3>
+            <p data-i18n="attr1_desc">Gërmadhat e shenjta me mozaikë të shekullit V-VI — zemra shpirtërore e Linit.</p>
+          </div>
+        </div>
+
+        <div class="attr-card reveal" style="--delay:0.1s">
+          <div class="attr-img-wrap">
+            <img src="src/images/lin-view.webp" alt="Liqeni i Ohrit" loading="lazy" />
+            <div class="attr-overlay"></div>
+          </div>
+          <div class="attr-body">
+            <div class="attr-tag" data-i18n="attr_tag_nature">Natyrë</div>
+            <h3 data-i18n="attr2_title">Liqeni i Ohrit</h3>
+            <p data-i18n="attr2_desc">Ujërat kristal, pellg natyror UNESCO — njëri nga liqenet më të vjetër në botë.</p>
+          </div>
+        </div>
+
+        <div class="attr-card reveal" style="--delay:0.2s">
+          <div class="attr-img-wrap">
+            <img src="src/images/sunset.webp" alt="Sunset" loading="lazy" />
+            <div class="attr-overlay"></div>
+          </div>
+          <div class="attr-body">
+            <div class="attr-tag" data-i18n="attr_tag_view">Pamje</div>
+            <h3 data-i18n="attr3_title">Perëndimi i Diellit</h3>
+            <p data-i18n="attr3_desc">Nga brigjet e Linit shihet ndoshta perëndimi i diellit më i bukur i gjithë Ballkanit.</p>
+          </div>
+        </div>
+
+        <div class="attr-card reveal" style="--delay:0.3s">
+          <div class="attr-img-wrap">
+            <img src="src/images/street.webp" alt="Rrugica" loading="lazy" />
+            <div class="attr-overlay"></div>
+          </div>
+          <div class="attr-body">
+            <div class="attr-tag" data-i18n="attr_tag_village">Fshat</div>
+            <h3 data-i18n="attr4_title">Rrugica të Gurta</h3>
+            <p data-i18n="attr4_desc">Labirinti i rrugicave me kalldrëm — çdo kthesë zbulon histori dhe arkitekturë tradicionale.</p>
+          </div>
+        </div>
+
+        <div class="attr-card reveal" style="--delay:0.4s">
+          <div class="attr-img-wrap">
+            <img src="src/images/view-point.webp" alt="Panorama" loading="lazy" />
+            <div class="attr-overlay"></div>
+          </div>
+          <div class="attr-body">
+            <div class="attr-tag" data-i18n="attr_tag_panorama">Panoramë</div>
+            <h3 data-i18n="attr5_title">Pikat Panoramike</h3>
+            <p data-i18n="attr5_desc">Majat mbi fshat ofrojnë pamje 360° të liqenit, maleve maqedonase dhe tokave shqiptare.</p>
+          </div>
+        </div>
+
+        <div class="attr-card reveal" style="--delay:0.5s">
+          <div class="attr-img-wrap">
+            <img src="src/images/bregu.webp" alt="Varka" loading="lazy" />
+            <div class="attr-overlay"></div>
+          </div>
+          <div class="attr-body">
+            <div class="attr-tag" data-i18n="attr_tag_water">Ujë</div>
+            <h3 data-i18n="attr6_title">Bregu i Liqenit</h3>
+            <p data-i18n="attr6_desc">Guri i bardhë dhe ujërat e tejdukshme — perfecte për not, relaksim dhe fotografi.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ AKTIVITETE ═══════════════════════════════════ -->
+  <section class="section aktivitete" id="aktivitete">
+    <div class="container">
+      <div class="section-label" data-i18n="section_label_act">Aktivitetet</div>
+      <h2 class="section-title" data-i18n="act_title">Çfarë mund të bëni në Lin</h2>
+
+      <div class="act-grid">
+        <div class="act-card reveal"><div class="act-icon">⛵</div><h3 data-i18n="act1">Ekskursione me Varkë</h3><p data-i18n="act1d">Lundroni nëpër ujërat kristal të Ohrit</p></div>
+        <div class="act-card reveal"><div class="act-icon">🏊</div><h3 data-i18n="act2">Not në Liqen</h3><p data-i18n="act2d">Ujërat e pastër me vizibilitet deri 20m</p></div>
+        <div class="act-card reveal"><div class="act-icon">🥾</div><h3 data-i18n="act3">Hiking & Trekking</h3><p data-i18n="act3d">Shtigje nëpër male me pamje mahnitëse</p></div>
+        <div class="act-card reveal"><div class="act-icon">📷</div><h3 data-i18n="act4">Fotografi</h3><p data-i18n="act4d">Çdo qoshe është një fotografi e gatshme</p></div>
+        <div class="act-card reveal"><div class="act-icon">🍽️</div><h3 data-i18n="act5">Ushqim Lokal</h3><p data-i18n="act5d">Shijo kuzhinën autentike shqiptare</p></div>
+        <div class="act-card reveal"><div class="act-icon">🚲</div><h3 data-i18n="act6">Çiklizëm</h3><p data-i18n="act6d">Rrugë bregdetare përgjatë liqenit</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ GALLERY ═══════════════════════════════════ -->
+  <section class="section galeria" id="galeria">
+    <div class="container">
+      <div class="section-label" data-i18n="section_label_gallery">Galeria</div>
+      <h2 class="section-title" data-i18n="gallery_title">Lin Nëpërmjet Objektivit</h2>
+    </div>
+
+    <div class="gallery-masonry">
+      <div class="gal-item reveal" data-src="src/images/lakeohrid.webp">
+        <img src="src/images/lakeohrid.webp" alt="Liqeni i Ohrit" loading="lazy" />
+      </div>
+
+      <div class="gal-item gal-tall reveal" data-src="src/images/panorama.webp">
+        <img src="src/images/panorama.webp"    alt="Panorama" loading="lazy" />
+      </div>
+      <div class="gal-item reveal" data-src="src/images/sunset2.webp">
+        <img src="src/images/sunset2.webp" alt="Sunset" loading="lazy" />
+      </div>
+      <div class="gal-item reveal" data-src="src/images/street-view.webp">
+        <img src="src/images/street-view.webp" alt="Rrugica" loading="lazy" />
+      </div>
+      <div class="gal-item gal-wide reveal" data-src="src/images/boat.webp">
+        <img src="src/images/boat.webp" alt="Varkë" loading="lazy" />
+      </div>
+
+      <div class="gal-item reveal" data-src="src/images/arkitektura.webp">
+        <img src="src/images/arkitektura.webp" alt="Arkitekturë" loading="lazy" />
+      </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" id="lbClose">✕</button>
+      <img class="lightbox-img" id="lbImg" src="" alt="" />
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ MAP ═══════════════════════════════════ -->
+  <section class="section harta" id="harta">
+    <div class="container">
+      <div class="section-label" data-i18n="section_label_map">Harta</div>
+      <h2 class="section-title" data-i18n="map_title">Gjeni Rrugën Tuaj</h2>
+    </div>
+    <div class="map-wrap">
+      <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1OwRXjzCkoAFucHItFxK3M6aLEuqDh8o&ehbc=2E312F" 
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Harta e Linit"
+      ></iframe>
+      <div class="map-legend">
+        <div class="legend-item"><span class="leg-dot leg-blue"></span><span data-i18n="leg_attractions">Atraksione</span></div>
+        <div class="legend-item"><span class="leg-dot leg-green"></span><span data-i18n="leg_restaurants">Restorante</span></div>
+        <div class="legend-item"><span class="leg-dot leg-gold"></span><span data-i18n="leg_views">Pamje Panoramike</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ GASTRONOMIA ═══════════════════════════════════ -->
+  <section class="section gastronomia" id="gastronomia">
+    <div class="container">
+      <div class="section-label" data-i18n="section_label_food">Gastronomia</div>
+      <h2 class="section-title" data-i18n="food_title">Shijet e Linit</h2>
+      <p class="section-lead" data-i18n="food_lead">Kuzhinë e pastër, produkte lokale, peshk nga liqeni — një eksperiencë kulinarike e vërtetë mesdhetare.</p>
+
+      <div class="food-grid">
+        <div class="food-card reveal">
+          <div class="food-img"><img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=500&q=75" alt="Koran" loading="lazy" /></div>
+          <div class="food-body"><h3 data-i18n="food1">Koran i Pjekur</h3><p data-i18n="food1d">Peshku i lashtë i Ohrit, i pjekur ngadalë mbi zjarr druri me barishte lokale.</p><div class="food-tag" data-i18n="food_signature">Specialiteti i Vendit</div></div>
+        </div>
+        <div class="food-card reveal">
+          <div class="food-img"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500&q=75" alt="Gjellë tradicionale" loading="lazy" /></div>
+          <div class="food-body"><h3 data-i18n="food2">Gjellë Tradicionale</h3><p data-i18n="food2d">Tavë kosi, fergesa dhe pjata autentike shqiptare me produkte nga kopshtet lokale.</p><div class="food-tag" data-i18n="food_local">Gjellë Lokale</div></div>
+        </div>
+        <div class="food-card reveal">
+          <div class="food-img"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=500&q=75" alt="Meze" loading="lazy" /></div>
+          <div class="food-body"><h3 data-i18n="food3">Meze Liqeni</h3><p data-i18n="food3d">Shkorje peshku, turshi shtëpiake, djathë brinxhol dhe bukë misri e freskët.</p><div class="food-tag" data-i18n="food_meze">Meze</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ SUNSET ═══════════════════════════════════ -->
+  <section class="sunset-section">
+    <div class="sunset-bg"></div>
+    <div class="sunset-overlay"></div>
+    <div class="sunset-content reveal">
+      <div class="sunset-quote-mark">"</div>
+      <blockquote class="sunset-quote" data-i18n="sunset_quote">Kur dielli perëndon mbi Liqenin e Ohrit nga brigjet e Linit, koha ndalet — dhe e kupton pse disa vende janë të shenjta.</blockquote>
+      <div class="sunset-attr" data-i18n="sunset_attr">— Vizitor nga Italia, 2023</div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ INFO TURISTIKE ═══════════════════════════════════ -->
+  <section class="section info-turistike" id="info">
+    <div class="container">
+      <div class="section-label" data-i18n="section_label_info">Informacion</div>
+      <h2 class="section-title" data-i18n="info_title">Informacion Turistik</h2>
+
+      <div class="info-grid">
+        <div class="info-card reveal"><div class="info-icon">🅿️</div><h3 data-i18n="info1">Parkimi</h3><p data-i18n="info1d">Parking i lirë pranë hyrjes së fshatit. Rekomandohet ardhja me mjet personal ose taxi nga Pogradeci.</p></div>
+        <div class="info-card reveal"><div class="info-icon">🌤️</div><h3 data-i18n="info2">Sezoni më i Mirë</h3><p data-i18n="info2d">Maj–Tetor për mot ideal. Vera (Qershor–Gusht) për not. Pranvera për lule e qetësi absolute.</p></div>
+        <div class="info-card reveal"><div class="info-icon">📍</div><h3 data-i18n="info3">Si të Arrini</h3><p data-i18n="info3d">18 km nga Pogradeci. Autobusë nga Tirana (4h), Korça (1.5h). Aeroporti më i afërt: Korça ose Tiranë.</p></div>
+        <div class="info-card reveal"><div class="info-icon">🌡️</div><h3 data-i18n="info4">Klima</h3><p data-i18n="info4d">Mesdhetare kontinentale. Verë e ngrohtë 25–32°C, dimër i butë. Lagështi e ulët, ajër i pastër malorë.</p></div>
+        <div class="info-card reveal"><div class="info-icon">🏛️</div><h3 data-i18n="info5">Vende Afër</h3><p data-i18n="info5d">Pogradec (18km), Ohrid/Maqedoni (40km), Korça (55km), Berati (160km).</p></div>
+        <div class="info-card reveal"><div class="info-icon">💡</div><h3 data-i18n="info6">Këshilla</h3><p data-i18n="info6d">Mbani ujë. Vishni këpucë të rehatshme për rrugica. Respektoni vendet historike. Fotografoni lirshëm!</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ FOOTER ═══════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">LIN</div>
+      <p class="footer-tagline" data-i18n="footer_tag">Liqeni i Ohrit · Pogradec · Shqipëri</p>
+      <div class="footer-links">
+        <a href="#historia" data-i18n="nav_history">Historia</a>
+        <a href="#attractions" data-i18n="nav_attractions">Atraksionet</a>
+        <a href="#galeria" data-i18n="nav_gallery">Galeria</a>
+        <a href="#info" data-i18n="nav_info">Informacion</a>
+      </div>
+      <p class="footer-copy">© 2025 Lin Tourism. <span data-i18n="footer_copy">Të gjitha të drejtat e rezervuara.</span></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
